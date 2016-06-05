@@ -1,0 +1,109 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+
+#content {
+    width: 500px;
+    height: 500px;
+}
+
+.absoluteCenter {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.absoluteCenter div {
+    position: relative;
+}
+
+#amulet {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+#amulet img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.twilight {
+    font-family: twilight, serif;
+}
+
+#passwordBlock p.title {
+    font-size: xx-large;
+    text-align: center;
+    font-weight: lighter;
+    margin: 10px;
+}
+
+#passwordBlock #inputPopup {
+    background-image: url("../images/inputBackground.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 30px 30px 17px 30px;
+}
+
+#passwordBlock input {
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    width: 225px;
+    height: 1em;
+    font-size: 2em;
+    margin: 0 auto;
+    margin-top: 35px;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    display: block;
+}
+
+#passwordBlock input:focus {
+    outline: none;
+}
+
+#passwordBlock #upperscores {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: top;
+    font-size: 2.70em;
+    width: 225px;
+}
+
+#passwordBlock p.subtext {
+    font-size: small;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+}
+
+#key {
+    margin: 0 auto;
+    margin-top: -50px;
+    height: 250px;
+    width: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/key.png");
+}
+
+#key:hover {
+    background-image: url("../images/keyFocussed.png");
+}
+
+@font-face {
+    font-family: 'twilight';
+    src: url("../fonts/twilight.ttf");
+}
+
+/*# sourceMappingURL=main.css.map */
