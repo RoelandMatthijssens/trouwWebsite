@@ -5,7 +5,7 @@ body {
 
 #content {
   width: 500px;
-  height: 500px;
+  height: 650px;
 }
 
 .absoluteCenter {
@@ -56,7 +56,7 @@ body {
     text-transform: uppercase;
     border: none;
     background-color: transparent;
-    width: 225px;
+    width: 230px;
     height: 1em;
     font-size: 2em;
     margin: 0 auto;
@@ -72,19 +72,23 @@ body {
     text-align: center;
     vertical-align: top;
     font-size: 2.70em;
-    width: 225px;
+    width: 230px;
   }
   p.subtext {
     font-size: small;
     font-weight: lighter;
     text-align: center;
     margin: 0;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
 
 #key {
   margin: 0 auto;
-  margin-top: -50px;
+  //  margin-top: -50px;
   height: 250px;
   width: 300px;
   background-size: 100% 100%;

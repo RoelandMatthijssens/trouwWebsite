@@ -5,7 +5,7 @@ body {
 
 #content {
     width: 500px;
-    height: 500px;
+    height: 650px;
 }
 
 .absoluteCenter {
@@ -44,19 +44,17 @@ body {
     font-weight: lighter;
     margin: 10px;
 }
-
 #passwordBlock #inputPopup {
     background-image: url("../images/inputBackground.png");
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 30px 30px 17px 30px;
 }
-
 #passwordBlock input {
     text-transform: uppercase;
     border: none;
     background-color: transparent;
-    width: 225px;
+    width: 230px;
     height: 1em;
     font-size: 2em;
     margin: 0 auto;
@@ -70,16 +68,14 @@ body {
 #passwordBlock input:focus {
     outline: none;
 }
-
 #passwordBlock #upperscores {
     padding: 0;
     margin: 0 auto;
     text-align: center;
     vertical-align: top;
     font-size: 2.70em;
-    width: 225px;
+    width: 230px;
 }
-
 #passwordBlock p.subtext {
     font-size: small;
     font-weight: lighter;
@@ -87,9 +83,13 @@ body {
     margin: 0;
 }
 
+#passwordBlock p.subtext a {
+    text-decoration: none;
+    color: black;
+}
+
 #key {
     margin: 0 auto;
-    margin-top: -50px;
     height: 250px;
     width: 300px;
     background-size: 100% 100%;
