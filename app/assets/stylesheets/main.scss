@@ -1,0 +1,113 @@
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+}
+
+#content {
+  width: 500px;
+  height: 650px;
+}
+
+.absoluteCenter {
+  div {
+    position: relative;
+  }
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#amulet {
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.twilight {
+  font-family: twilight, serif;
+}
+
+#passwordBlock {
+  p.title {
+    font-size: xx-large;
+    text-align: center;
+    font-weight: lighter;
+    margin: 10px;
+  }
+  #inputPopup {
+    background-image: url("inputBackground.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 30px 30px 17px 30px;
+  }
+  input {
+    &:focus {
+      outline: none;
+    }
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    width: 230px;
+    height: 1em;
+    font-size: 2em;
+    margin: 0 auto;
+    margin-top: 35px;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    display: block;
+  }
+  #upperscores {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: top;
+    font-size: 2.70em;
+    width: 230px;
+  }
+  p.subtext {
+    font-size: medium;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+#key {
+  margin: 0 auto;
+  //  margin-top: -50px;
+  height: 250px;
+  width: 300px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("key.png");
+  &:hover {
+    background-image: url("keyFocussed.png");
+  }
+}
+
+#paperContainer{
+    padding:12px;
+    background: url('tornPaper.png');
+    background-size:100%, 100%;
+    background-repeat: no-repeat;
+
+}
+
+@font-face {
+  font-family: 'twilight';
+  src: url('../fonts/twilight.ttf');
+}

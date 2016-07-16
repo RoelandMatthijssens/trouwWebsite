@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>RSVP informatie</h1>
+<%= @rsvp.name1 %>
+<% if @rsvp.name2 %>
+  en
+  <%= @rsvp.name2 %>
+<%end%>
+<br/>
+
+<% if @rsvp.ceremony %>
+  Wij zullen aanwezig zijn bij de ceremonie
+<% else %>
+  Wij zullen <strong>niet</strong> aanwezig zijn bij de ceremonie
+<% end %>
+<br/>
+
+<% if @rsvp.reception %>
+  Wij zullen aanwezig zijn bij de receptie
+<% else %>
+  Wij zullen <strong>niet</strong> aanwezig zijn bij de receptie
+<% end %>
+<br/>
+
+<% if @rsvp.diner %>
+  Wij zullen aanwezig zijn bij het diner en avondfeest
+<% else %>
+  Wij zullen <strong>niet</strong> aanwezig zijn bij het diner en avondfeest
+<% end %>
+<br/>
+
+Indien er iets niet klopt aan de informatie kan je deze <%= link_to 'hier', edit_rsvp_path(@rsvp) %> aanpassen

@@ -1,0 +1,43 @@
+<div id='paperContainer'>
+    <%= form_for(@rsvp) do |f| %>
+      <% if @rsvp.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@rsvp.errors.count, "error") %> prohibited this rsvp from being saved:</h2>
+
+          <ul>
+          <% @rsvp.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <h1>
+          " <%= f.text_field :name1 %>
+          &amp;
+          <%= f.text_field :name2 %>
+          say '<span class='fancy-text'>i do</span>'
+          to your invitation!"
+      </h1>
+
+      <div class='decal'>decal</div>
+        <table>
+        <tr>
+            <td>Ik ben aanwezig voor de ceremony</td>
+            <td><%= f.check_box :ceremony %></td>
+        </tr>
+        <tr>
+            <td>Ik ben aanwezig voor de receptie</td>
+            <td><%= f.check_box :reception %></td>
+        </tr>
+        <tr>
+            <td>Ik ben aanwezig voor het diner/avondfeest</td>
+            <td><%= f.check_box :diner %></td>
+        </tr>
+        </table>
+      <div class='decal'>decal</div>
+      <div class="actions">
+        <%= f.submit "RSVP!"%>
+      </div>
+    <% end %>
+</div>
