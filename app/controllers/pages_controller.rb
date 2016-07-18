@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   skip_before_filter :verify_authenticity_token
-  PASSWORD = 'ALOHAMORA'
+  PASSWORD = 'ALOHOMORA'
   def index
   end
 

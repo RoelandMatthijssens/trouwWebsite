@@ -13,29 +13,37 @@
       <% end %>
 
       <h1>
-          " <%= f.text_field :name1 %>
-          &amp;
-          <%= f.text_field :name2 %>
-          say '<span class='fancy-text'>i do</span>'
-          to your invitation!"
+          <%= image_tag("quote.png", class:'quote') %>
+          <span id='name1' contenteditable="true" class='name-input'></span>
+          <%= f.text_field :name1, placeholder: 'name1', class: 'hidden' %>
+          <%= image_tag("ampersand.png", class: 'ampersand') %>
+          <span id='name2' contenteditable="true" class='name-input'></span>
+          <%= f.text_field :name2, placeholder: 'name2(optional)', class: 'hidden' %>
+          <%= image_tag("sayido.png", class:'full_width') %>
       </h1>
 
-      <div class='decal'>decal</div>
-        <table>
+      <div class='decal'></div>
+        <table class='rsvp_options'>
         <tr>
-            <td>Ik ben aanwezig voor de ceremony</td>
+            <td>
+                <%= f.label :ceremony, 'Ik ben aanwezig voor de ceremony (14h)' %>
+            </td>
             <td><%= f.check_box :ceremony %></td>
         </tr>
         <tr>
-            <td>Ik ben aanwezig voor de receptie</td>
+            <td>
+                <%= f.label :reception, 'Ik ben aanwezig voor de receptie (aansluitend)' %>
+            </td>
             <td><%= f.check_box :reception %></td>
         </tr>
         <tr>
-            <td>Ik ben aanwezig voor het diner/avondfeest</td>
+            <td>
+                <%= f.label :diner, 'Ik ben aanwezig voor het diner/avondfeest' %>
+            </td>
             <td><%= f.check_box :diner %></td>
         </tr>
         </table>
-      <div class='decal'>decal</div>
+      <div class='decal'></div>
       <div class="actions">
         <%= f.submit "RSVP!"%>
       </div>

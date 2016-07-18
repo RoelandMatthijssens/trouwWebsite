@@ -12,5 +12,53 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 //= require_tree .
+
+jQuery.fn.selectText = function() {
+  var range, selection;
+  return this.each(function() {
+    if (document.body.createTextRange) {
+      range = document.body.createTextRange();
+      range.moveToElementText(this);
+      range.select();
+    } else if (window.getSelection) {
+      selection = window.getSelection();
+      range = document.createRange();
+      range.selectNodeContents(this);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+  });
+};
+
+function copyFormToContent(from, to){
+    var content = $(from).val();
+    if(!content){
+        content = $(from).attr('placeholder');
+    }
+    $(to).html(content);
+}
+
+function copyContentToForm(from, to){
+    var content = $(from).text();
+    $(to).val(content);
+}
+function copyForm(){
+	    copyContentToForm('#name1', "#rsvp_name1")
+	    copyContentToForm('#name2', "#rsvp_name2")
+}
+
+function init(){
+    copyFormToContent('#rsvp_name1', '#name1')
+    copyFormToContent('#rsvp_name2', '#name2')
+    $(".name-input").focus(function(){
+        $(this).selectText();
+    })
+    $(".name-input").focusout(function(){
+        copyForm();
+    })
+	//$("#new_rsvp").submit(copyForm)
+}
+
+$(init);
