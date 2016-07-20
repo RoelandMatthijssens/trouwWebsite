@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/bootstrap-tooltip
 // require turbolinks
 //= require_tree .
 
@@ -48,6 +49,9 @@ function copyForm(){
 	    copyContentToForm('#name1', "#rsvp_name1")
 	    copyContentToForm('#name2', "#rsvp_name2")
 }
+function initTooltips(){
+  $(".my-tooltip").tooltip();
+}
 
 function init(){
     copyFormToContent('#rsvp_name1', '#name1')
@@ -58,7 +62,7 @@ function init(){
     $(".name-input").focusout(function(){
         copyForm();
     })
-	//$("#new_rsvp").submit(copyForm)
+	initTooltips();
 }
 
 $(init);

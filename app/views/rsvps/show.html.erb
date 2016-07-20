@@ -1,3 +1,6 @@
+<div class='centered p80 birds'>
+    <%= image_tag('birds.png') %>
+</div>
 <div id='paperContainer'>
 
     <%= image_tag('bedankt.png', class: 'full_width') %>
@@ -37,10 +40,30 @@
                 <% end %>
             </p>
 
-            <br/>
-            <p>
+            <p class='smaller'>
                 Indien er iets niet klopt aan de informatie kan je deze <%= link_to 'hier', edit_rsvp_path(@rsvp) %> aanpassen
             </p>
         </div>
     </div>
 </div>
+<div class='info-boxes'>
+<div class='info-box my-tooltip' title='Zwierige jurken 
+en hemden paraat,
+maar draag vooral gewoon
+wat jou het beste staat! :)'><%= image_tag('dresscode.png') %></div>
+
+<div class='info-box my-tooltip' title="Sparen voor een huisje,
+of toch maar eerst op reis?
+Met een centje als presentje,
+heb je altijd prijs!"><%= image_tag('gifttip.png') %></div>
+
+<div class='info-box my-tooltip' title='Op onze grote dag 
+geen ‘Wie is BOB?’-vraag.
+Zot maar niet zat,
+amuseren we ons nuchter vandaag!'><%= image_tag('drinks.png') %></div>
+
+<div class='info-box my-tooltip' title='Een week na het huwelijksbootje,
+kiezen wij het ruime sop.
+Middenlandse zee here we come,
+de honeymoon cruise wordt top!'><%= image_tag('honeymoon.png') %></div>
+<div>
