@@ -4,20 +4,9 @@ body {
 }
 
 #content {
-  width: 500px;
-  height: 650px;
-}
-
-.absoluteCenter {
-  div {
-    position: relative;
-  }
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  width: 700px;
+  margin-top: 10%;
+  height: 80%;
 }
 
 #amulet {
@@ -101,8 +90,8 @@ body {
 }
 
 #paperContainer{
-    padding:45px;
-    margin: -70px;
+    padding:150px;
+    margin: -60px;
     background: url('page.png');
     background-size:100%, 100%;
     background-repeat: no-repeat;
@@ -158,7 +147,7 @@ input[type="checkbox"]:checked + label {
     height: 20px;
     width: 20px;
 }
-.name-input{
+.aparaji{
   font-family: aparaji, serif;
   color: #890228;
   font-size: 50px;
@@ -167,4 +156,17 @@ input[type="checkbox"]:checked + label {
 
 .hidden{
     display: none;
+}
+
+.centered{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info>p{
+    font-size: medium;
+}
+
+.p80{
+    width: 80%;
 }

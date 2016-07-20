@@ -1,32 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div id='paperContainer'>
 
-<h1>RSVP informatie</h1>
-<%= @rsvp.name1 %>
-<% if @rsvp.name2 %>
-  en
-  <%= @rsvp.name2 %>
-<%end%>
-<br/>
+    <%= image_tag('bedankt.png', class: 'full_width') %>
 
-<% if @rsvp.ceremony %>
-  Wij zullen aanwezig zijn bij de ceremonie
-<% else %>
-  Wij zullen <strong>niet</strong> aanwezig zijn bij de ceremonie
-<% end %>
-<br/>
 
-<% if @rsvp.reception %>
-  Wij zullen aanwezig zijn bij de receptie
-<% else %>
-  Wij zullen <strong>niet</strong> aanwezig zijn bij de receptie
-<% end %>
-<br/>
+    <div class='centered p80'>
+        <p id="notice" class='centered'><%= notice %></p>
+        <span class='aparaji'> <%= @rsvp.name1 %></span>
+        <% if @rsvp.name2 %>
+          <%= image_tag('ampersand.png', class:'ampersand') %>
+          <span class='aparaji'> <%= @rsvp.name2 %></span>
+        <%end%>
 
-<% if @rsvp.diner %>
-  Wij zullen aanwezig zijn bij het diner en avondfeest
-<% else %>
-  Wij zullen <strong>niet</strong> aanwezig zijn bij het diner en avondfeest
-<% end %>
-<br/>
+        <div class='aparaji info'>
 
-Indien er iets niet klopt aan de informatie kan je deze <%= link_to 'hier', edit_rsvp_path(@rsvp) %> aanpassen
+            <p>
+                <% if @rsvp.ceremony %>
+                  Wij zullen aanwezig zijn bij de ceremonie
+                <% else %>
+                  Wij zullen <strong>niet</strong> aanwezig zijn bij de ceremonie
+                <% end %>
+            </p>
+
+            <p>
+                <% if @rsvp.reception %>
+                  Wij zullen aanwezig zijn bij de receptie
+                <% else %>
+                  Wij zullen <strong>niet</strong> aanwezig zijn bij de receptie
+                <% end %>
+            </p>
+
+            <p>
+                <% if @rsvp.diner %>
+                  Wij zullen aanwezig zijn bij het diner en avondfeest
+                <% else %>
+                  Wij zullen <strong>niet</strong> aanwezig zijn bij het diner en avondfeest
+                <% end %>
+            </p>
+
+            <br/>
+            <p>
+                Indien er iets niet klopt aan de informatie kan je deze <%= link_to 'hier', edit_rsvp_path(@rsvp) %> aanpassen
+            </p>
+        </div>
+    </div>
+</div>
