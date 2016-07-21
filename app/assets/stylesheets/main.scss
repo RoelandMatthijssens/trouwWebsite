@@ -113,12 +113,12 @@ body {
 
 @font-face {
   font-family: 'twilight';
-  src: url('/assets/fonts/twilight.ttf');
+  src: font-url('twilight.ttf');
 }
 
 @font-face {
   font-family: 'aparaji';
-  src: url('/assets/fonts/aparaji.ttf');
+  src: font-url('aparaji.ttf');
 }
 
 .full_width {
