@@ -1,22 +1,22 @@
 <div class='centered p80 birds'>
     <%= image_tag('birds.png') %>
 </div>
-<div id='paperContainer'>
+<div id='paperContainer' class='short'>
 
     <%= image_tag('bedankt.png', class: 'full_width') %>
 
 
     <div class='centered p80'>
-        <p id="notice" class='centered'><%= notice %></p>
-        <span class='aparaji'> <%= @rsvp.name1 %></span>
-        <% if @rsvp.name2 %>
-          <%= image_tag('ampersand.png', class:'ampersand') %>
-          <span class='aparaji'> <%= @rsvp.name2 %></span>
-        <%end%>
+        <span class='aparaji large black'> <%= @rsvp.name1 %></span>
+        <%= image_tag('ampersand.png', class:'ampersand') %>
+        <span class='aparaji large black'> <%= @rsvp.name2 %></span>
 
-        <div class='aparaji info'>
 
-            <p>
+
+        <div class='info'>
+            <p class='aparaji normal'>We hebben je RSVP goed ontvangen</p>
+
+            <p class='normal black'>
                 <% if @rsvp.ceremony %>
                   Wij zullen aanwezig zijn bij de ceremonie
                 <% else %>
@@ -24,7 +24,7 @@
                 <% end %>
             </p>
 
-            <p>
+            <p class='normal black'>
                 <% if @rsvp.reception %>
                   Wij zullen aanwezig zijn bij de receptie
                 <% else %>
@@ -32,7 +32,7 @@
                 <% end %>
             </p>
 
-            <p>
+            <p class='normal black'>
                 <% if @rsvp.diner %>
                   Wij zullen aanwezig zijn bij het diner en avondfeest
                 <% else %>
@@ -40,7 +40,7 @@
                 <% end %>
             </p>
 
-            <p class='smaller'>
+            <p class='aparaji small black'>
                 Indien er iets niet klopt aan de informatie kan je deze <%= link_to 'hier', edit_rsvp_path(@rsvp) %> aanpassen
             </p>
         </div>

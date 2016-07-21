@@ -56,12 +56,12 @@ function initTooltips(){
 function init(){
     copyFormToContent('#rsvp_name1', '#name1')
     copyFormToContent('#rsvp_name2', '#name2')
-    $(".name-input").focus(function(){
-        $(this).selectText();
-    })
-    $(".name-input").focusout(function(){
-        copyForm();
-    })
+    // $(".name-input").focus(function(){
+    //     $(this).selectText();
+    // })
+    // $(".name-input").focusout(function(){
+    //     copyForm();
+    // })
 	initTooltips();
 }
 
