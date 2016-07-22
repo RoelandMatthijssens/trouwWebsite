@@ -7,9 +7,13 @@
 
 
     <div class='centered p80'>
+        <div class='inner-centered'>
         <span class='aparaji large black'> <%= @rsvp.name1 %></span>
-        <%= image_tag('ampersand.png', class:'ampersand') %>
-        <span class='aparaji large black'> <%= @rsvp.name2 %></span>
+        <% unless @rsvp.name2.nil? || @rsvp.name2 == '' %>
+            <%= image_tag('ampersand.png', class:'ampersand') %>
+            <span class='aparaji large black'> <%= @rsvp.name2 %></span>
+        <% end %>
+        </div>
 
 
 
