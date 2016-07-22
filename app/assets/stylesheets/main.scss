@@ -95,7 +95,6 @@ body {
 #paperContainer{
     padding-left:150px;
     padding-right:150px;
-    padding-top:60px;
     padding-bottom:45px;
     margin-left:-60px;
     margin-right:-60px;
@@ -103,6 +102,8 @@ body {
         background: image-url('longpage.png');
         background-size:100% 100%;
         background-repeat: no-repeat;
+        padding-top:60px;
+        margin-top: 60px;
     
     }
     &.short{
@@ -110,6 +111,7 @@ body {
         background-size:contain;
         background-repeat: no-repeat;
         background-position:center;
+        padding-top:60px;
     }
 
 }
@@ -144,7 +146,7 @@ body {
     height: 100px;
     width: 100%;
     background-position: center;
-    background-size: 80% 100%;
+    background-size: 70% 80%;
     background-repeat: no-repeat;
     background-image: image-url("decal.png");
 }
