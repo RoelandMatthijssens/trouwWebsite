@@ -16,3 +16,6 @@
 !/log/.keep
 /tmp
 .idea
+weddingPictures/
+thumbnails/
+Gemfile.lock

@@ -1,6 +1,6 @@
 class RsvpsController < ApplicationController
   before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: "enermis", password: "somesecret", except: [:create, :show, :edit, :update, :new]
+  http_basic_authenticate_with name: "enermis", password: Rails.application.secrets.simple_auth_secret, except: [:create, :show, :edit, :update, :new]
 
   # GET /rsvps
   # GET /rsvps.json

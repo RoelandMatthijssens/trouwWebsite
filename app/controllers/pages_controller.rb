@@ -31,9 +31,10 @@ class PagesController < ApplicationController
 
   def gallery
     @images = []
-    Dir.foreach(Rails.root.join('app', 'assets', 'images', 'weddingPictures')) do |filename|
-      next if filename == '.' or filename == '..'
-      @images << filename
+    @fulls = Dir.glob("app/assets/images/weddingPictures/*.jpg")
+    @thumbnails = Dir.glob("app/assets/images/thumbnails/*.jpg")
+    @fulls.each_index do |i|
+      @images << [@fulls[i].split('/').last, @thumbnails[i].split('/').last]
     end
   end
 end

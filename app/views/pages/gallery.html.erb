@@ -1,7 +1,8 @@
+<%= @images %>
 <div id="thumbs">
   <% @images.each do |image| %>
-      <a href="<%= image_path('weddingPictures/'+image) %>"
-         style="background-image:url(<%= image_path("thumbnails/"+image) %>)">
+      <a href="<%= asset_url('weddingPictures/'+image[0]) %>"
+         style="background-image:url(<%= asset_url('thumbnails/'+image[1]) %>)">
       </a>
   <% end %>
 </div>
