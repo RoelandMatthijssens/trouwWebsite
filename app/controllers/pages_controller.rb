@@ -28,4 +28,13 @@ class PagesController < ApplicationController
 
   def thank_you
   end
+
+  def gallery
+    @images = []
+    @fulls = Dir.glob("app/assets/images/weddingPictures/*.jpg")
+    @thumbnails = Dir.glob("app/assets/images/thumbnails/*.jpg")
+    @fulls.each_index do |i|
+      @images << [@fulls[i].split('/').last, @thumbnails[i].split('/').last]
+    end
+  end
 end
