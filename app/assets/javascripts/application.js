@@ -15,6 +15,11 @@
 //= require bootstrap/bootstrap-tooltip
 // require turbolinks
 //= require_tree .
+//= require gallery/touch_touch
+
+//= require jquery/jquery.easing-1.3
+//= require jquery/jquery.elastislide
+//= require jquery/jquery.tmpl.min
 
 jQuery.fn.selectText = function() {
   var range, selection;
@@ -46,22 +51,17 @@ function copyContentToForm(from, to){
     $(to).val(content);
 }
 function copyForm(){
-	    copyContentToForm('#name1', "#rsvp_name1")
-	    copyContentToForm('#name2', "#rsvp_name2")
+	    copyContentToForm('#name1', "#rsvp_name1");
+	    copyContentToForm('#name2', "#rsvp_name2");
 }
 function initTooltips(){
   $(".my-tooltip").tooltip();
 }
 
 function init(){
-    copyFormToContent('#rsvp_name1', '#name1')
-    copyFormToContent('#rsvp_name2', '#name2')
-    // $(".name-input").focus(function(){
-    //     $(this).selectText();
-    // })
-    // $(".name-input").focusout(function(){
-    //     copyForm();
-    // })
+    copyFormToContent('#rsvp_name1', '#name1');
+    copyFormToContent('#rsvp_name2', '#name2');
+    $('#thumbs a').touchTouch();
 	initTooltips();
 }
 

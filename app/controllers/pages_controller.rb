@@ -28,4 +28,12 @@ class PagesController < ApplicationController
 
   def thank_you
   end
+
+  def gallery
+    @images = []
+    Dir.foreach(Rails.root.join('app', 'assets', 'images', 'weddingPictures')) do |filename|
+      next if filename == '.' or filename == '..'
+      @images << filename
+    end
+  end
 end

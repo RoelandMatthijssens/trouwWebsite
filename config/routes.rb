@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'login' , to: 'pages#index'
   get 'rsvp'  , to: 'pages#rsvp_view'
   get 'thank_you'  , to: 'pages#thank_you'
+  get 'gallery', to: 'pages#gallery'
   post 'enter', to: 'pages#enter'
 
   # The priority is based upon order of creation: first created -> highest priority.
